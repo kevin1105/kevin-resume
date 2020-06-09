@@ -36,15 +36,15 @@ class App extends Component{
             <div className="logo" />
             <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
               <Menu.Item key="1">
-                Game
-                <Link to="/game"/>
+                Home
+                <Link to="/"/>
               </Menu.Item>
               <Menu.Item key="2">
-                Stocks
-                <Link to="/stocks"/>
+                Login
+                <Link to="/login"/>
               </Menu.Item>
               <Menu.Item key="3">
-                Code
+                About me
                 <Link to="/code"/>
               </Menu.Item>
             </Menu>
