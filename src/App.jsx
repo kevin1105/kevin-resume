@@ -13,10 +13,22 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import axios from 'axios';
 
 const { SubMenu } = Menu;
 const { Header, Content, Footer, Sider } = Layout;
 
+
+function test() {
+  axios.get('https://99.167.210.241:3030/')
+    .then(res => {
+      // using setstate causes infinite re-rendering 
+      // to avoid it mutate state indirectly to avoid warning
+      let msg = res.data
+      console.log(msg)
+    })
+}
+test()
 
 class App extends Component{
   render() {
