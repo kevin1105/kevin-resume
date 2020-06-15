@@ -18,9 +18,10 @@ import axios from 'axios';
 const { SubMenu } = Menu;
 const { Header, Content, Footer, Sider } = Layout;
 
+let backendlink = 'https://backend:3030/';
 
 function test() {
-  axios.get('https://99.167.210.241:3030/')
+  axios.get(backendlink)
     .then(res => {
       // using setstate causes infinite re-rendering 
       // to avoid it mutate state indirectly to avoid warning
