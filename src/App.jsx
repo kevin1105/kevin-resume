@@ -20,7 +20,7 @@ const { Header, Content, Footer, Sider } = Layout;
 
 let backendlink = 'https://backend:3030/';
 
-function test() {
+function Test() {
   axios.get(backendlink)
     .then(res => {
       // using setstate causes infinite re-rendering 
@@ -28,8 +28,12 @@ function test() {
       let msg = res.data
       console.log(msg)
     })
+  return (
+    <div> 
+      msg
+    </div>
+  )
 }
-test()
 
 class App extends Component{
   render() {
@@ -96,13 +100,27 @@ class App extends Component{
                   </SubMenu> */}
                 </Menu>
               </Sider>
-        
+              {/* if route is this path then put contents here */}
+              <Route path="/" >
+                <Test />
+              </Route>
               <Content  style={{ padding: '0 24px', minHeight: 280 }}>Content</Content>
               <Content style={{ padding: '0 24px', minHeight: 280 }}>Test2</Content>
             </Layout>
           </Content>
           <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
         </Layout>
+
+
+      {/*
+      For edit under the first layout
+      <Switch>
+        <Route path="/" >
+          <Test />
+        </Route>
+      </Switch>
+      */
+      }
       
       </BrowserRouter>
       </div>
