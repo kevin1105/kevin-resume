@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+// import React, { Component } from "react";
 import './App.css';
 /*
 
@@ -45,13 +45,13 @@ class App extends Component{
     return(
       <div>
 //         <BrowserRouter>
-        <div>
+        
           Stocks Page Test
-        </div>
+        
       
-        <div>
-          <Button type="">Button</Button>
-        </div>
+//         <div>
+//           <Button type="">Button</Button>
+//         </div>
 
 //         <Layout>
 //           <Header className="header">
@@ -128,6 +128,7 @@ class App extends Component{
       }
       
 //       </BrowserRouter>
+  
       </div>
     );
   }
